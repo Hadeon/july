@@ -4,4 +4,32 @@
   width: 100%;
   top: 0;
   background-color: #222;
+  z-index: 2;
+  color: white;
+}
+
+.header-container h2 {
+  margin-top: 1rem;
+  margin-left: 4rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.side-container {
+  position: absolute;
+  height: 100%;
+  width: 20rem;
+  top: 0;
+  background-color: #222;
+  z-index: 1;
+}
+
+.active {
+  left: 0;
+  transition: left 1s;
+}
+
+.hidden {
+  left: -20rem;
+  transition: left 1s;
 }
