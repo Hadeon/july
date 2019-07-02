@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.css';
 
-import Header from './components/Header';
+import PageLayout from './components/PageLayout';
+
+// Convert into a class component in order to store a state for the body's className (push contents to the right when the sidebar opens)
 
 function App() {
   return (
-    <React.Fragment>
-      <Header/>
-      <div className="App">
-        <h1>This is a template project.</h1>
-        <p>What this will turn into, I don't know.</p>
-      </div>
-    </React.Fragment>
+    <PageLayout resizeBody={ function resizeBody(){ return; }}>
+      
+    </PageLayout>
   );
 }
 

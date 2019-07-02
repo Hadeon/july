@@ -1,0 +1,24 @@
+.sidebar-body {
+    width: 100%;
+    margin-top: 4rem;
+}
+
+.sidebar-body h2 {
+    color: white;
+    padding: 1rem;
+    background-color: #444;
+}
+
+.sidebar-body ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-body ul li {
+    padding: .5rem;
+    color: white;
+    background-color: #444;
+    margin: 1rem;
+    user-select: none;
+    cursor: pointer;
+}
