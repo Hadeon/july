@@ -14,7 +14,7 @@ export default class Header extends Component {
     return (
       <React.Fragment>
         <div className="header-container">
-          <h2 onClick={() => this.openSidebar()}>Open Sidebar</h2>
+          <div onClick={() => this.openSidebar()} className={`arrow ${this.state.clicked ? 'down' : 'left'}`}/>
         </div>
         <div className={`side-container ${this.state.clicked ? 'active' : 'hidden'}`}>
 
