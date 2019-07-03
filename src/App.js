@@ -5,6 +5,7 @@ import './App.css';
 import PageLayout from './components/PageLayout';
 
 import Login from './routes/Login';
+import Home from './routes/Home';
 
 // Redux Store and BrowserRouter need to be implemented here
 
@@ -15,7 +16,7 @@ function App() {
   return (
     <PageLayout>
       <Router>
-        <Route exact path="/" component={Login} />
+        <Route exact path="/" component={Home} />
       </Router>
     </PageLayout>
   );

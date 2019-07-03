@@ -6,7 +6,7 @@ import MainContainer from './MainContainer';
 
 export default class PageLayout extends Component {
   state = {
-    sidebarActive: true
+    sidebarActive: false
   }
   openSidebar() {
     this.setState(prevState => ({
