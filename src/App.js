@@ -4,7 +4,7 @@ import './App.css';
 
 import PageLayout from './components/PageLayout';
 
-import Login from './components/Login';
+import Login from './routes/Login';
 
 // Redux Store and BrowserRouter need to be implemented here
 
