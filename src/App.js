@@ -1,25 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import PageLayout from './components/PageLayout';
+
+// Redux Store and BrowserRouter need to be implemented here
+
+// Logged in state and validation at the highest level so the user would be kicked back to login from here.
+// Additionally, pass the logged in state down to PageLayout and hide the navigation options if not logged in.
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <PageLayout>
+      {/* Render the particular routes as child components passed to PageLayout */}
+    </PageLayout>
   );
 }
 

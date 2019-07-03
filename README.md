@@ -1,5 +1,15 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Future Development
+
+While I don't know what exactly I will be building here (though likely an ecommerce app) I will certainly be adding some basic features regardless of which direction I go in.
+
+  - Google Login (Possibly alternatives as well)
+  - Lazy Loading (As it's a feature I should mess with, and regardless will be useful for a large amount of data)
+  - A cart feature (If this goes in an ecommerce direction)
+  - If so, I'll need to integrate Paypal checkout
+  - Determine which DB I will be using. Possibly Firebase? (As I've already gotten practice with MLabs)
+
 ## Available Scripts
 
 In the project directory, you can run:
