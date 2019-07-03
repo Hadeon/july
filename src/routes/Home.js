@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
+import './Home.css';
+
+import StoreItem from '../components/StoreItem';
 
 export default class Home extends Component {
   render() {
     return (
       <div style={{ display: 'flex', flexDirection: 'row', flexFlow: 'row wrap' }}>
-        { /* Render home stuff here */}
-        <div style={{ backgroundColor: '#aaa', width: '25rem', height: '10rem', margin: '1rem'}}>
-
-        </div>
-        <div style={{ backgroundColor: '#aaa', width: '25rem', height: '10rem', margin: '1rem'}}>
-
-        </div>
+        <StoreItem/>
+        <StoreItem/>
+        <StoreItem/>
+        <StoreItem/>
+        <StoreItem/>
+        <StoreItem/>
+        <StoreItem/>
       </div>
     )
   }
