@@ -12,7 +12,6 @@ export default class PageLayout extends Component {
     this.setState(prevState => ({
       sidebarActive: !prevState.sidebarActive
     }));
-    this.props.resizeBody();
   }
   render() {
     return (

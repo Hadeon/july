@@ -3,12 +3,15 @@ import './App.css';
 
 import PageLayout from './components/PageLayout';
 
-// Convert into a class component in order to store a state for the body's className (push contents to the right when the sidebar opens)
+// Redux Store and BrowserRouter need to be implemented here
+
+// Logged in state and validation at the highest level so the user would be kicked back to login from here.
+// Additionally, pass the logged in state down to PageLayout and hide the navigation options if not logged in.
 
 function App() {
   return (
-    <PageLayout resizeBody={ function resizeBody(){ return; }}>
-      
+    <PageLayout>
+      {/* Render the particular routes as child components passed to PageLayout */}
     </PageLayout>
   );
 }
