@@ -1,7 +1,10 @@
 import React from 'react';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 import PageLayout from './components/PageLayout';
+
+import Login from './components/Login';
 
 // Redux Store and BrowserRouter need to be implemented here
 
@@ -11,7 +14,9 @@ import PageLayout from './components/PageLayout';
 function App() {
   return (
     <PageLayout>
-      {/* Render the particular routes as child components passed to PageLayout */}
+      <Router>
+        <Route exact path="/" component={Login} />
+      </Router>
     </PageLayout>
   );
 }

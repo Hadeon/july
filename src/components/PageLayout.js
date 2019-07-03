@@ -26,7 +26,9 @@ export default class PageLayout extends Component {
           <div className={`container sidebar ${this.state.sidebarActive ? 'active' : 'hidden'}`}>
             <Sidebar/>
           </div>
-          <MainContainer sidebarActive={this.state.sidebarActive}/>
+          <MainContainer sidebarActive={this.state.sidebarActive}>
+            {this.props.children}
+          </MainContainer>
         </div>
 
       </React.Fragment>

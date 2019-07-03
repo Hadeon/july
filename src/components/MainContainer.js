@@ -6,6 +6,7 @@ export default class MainContainer extends Component {
     return (
       <div className={`main-container ${this.props.sidebarActive ? 'right-align' : 'left-align'}`}>
         <h2>test</h2>
+        {this.props.children}
       </div>
     )
   }
