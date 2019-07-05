@@ -1,18 +1,27 @@
 import React from 'react';
-import './App.css';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+import rootReducer from './_reducers';
 
-import PageLayout from './components/PageLayout';
+import PageLayout from './components/Layout/PageLayout';
 
-// Redux Store and BrowserRouter need to be implemented here
+import Home from './routes/Home';
+
+const store = createStore(rootReducer);
 
 // Logged in state and validation at the highest level so the user would be kicked back to login from here.
 // Additionally, pass the logged in state down to PageLayout and hide the navigation options if not logged in.
 
 function App() {
   return (
-    <PageLayout>
-      {/* Render the particular routes as child components passed to PageLayout */}
-    </PageLayout>
+    <Provider store={store}>
+      <PageLayout>
+        <Router>
+          <Route exact path="/" component={Home} />
+        </Router>
+      </PageLayout>
+    </Provider>
   );
 }
 

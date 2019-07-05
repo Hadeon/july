@@ -6,7 +6,7 @@ import MainContainer from './MainContainer';
 
 export default class PageLayout extends Component {
   state = {
-    sidebarActive: true
+    sidebarActive: false
   }
   openSidebar() {
     this.setState(prevState => ({
@@ -26,7 +26,9 @@ export default class PageLayout extends Component {
           <div className={`container sidebar ${this.state.sidebarActive ? 'active' : 'hidden'}`}>
             <Sidebar/>
           </div>
-          <MainContainer sidebarActive={this.state.sidebarActive}/>
+          <MainContainer sidebarActive={this.state.sidebarActive}>
+            {this.props.children}
+          </MainContainer>
         </div>
 
       </React.Fragment>
