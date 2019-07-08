@@ -17,7 +17,9 @@ export default class PageLayout extends Component {
     return (
       <React.Fragment>
         <div className="container navbar">
-          <div onClick={() => this.openSidebar()} className={`arrow ${this.state.sidebarActive ? 'down' : 'left'}`}/>
+          <div onClick={() => this.openSidebar()} className="arrow-container">
+            <div className={`arrow ${this.state.sidebarActive ? 'down' : 'left'}`}/>
+          </div>
         </div>
         <div style={{
           display: 'flex',

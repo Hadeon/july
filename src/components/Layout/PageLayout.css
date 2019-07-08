@@ -26,14 +26,18 @@
   transition: left .5s;
 }
 
+.arrow-container {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  padding: 1.25rem;
+  margin: 0rem 0rem 0rem 1rem;
+}
+
 .arrow {
   border: solid white;
   border-width: 0 3px 3px 0;
-  display: inline-block;
   padding: .5rem;
-  cursor: pointer;
-  user-select: none;
-  margin: 1.25rem 0rem 0rem 2rem;
 }
 
 .left {
