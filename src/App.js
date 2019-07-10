@@ -17,12 +17,12 @@ const store = createStore(rootReducer);
 function App() {
   return (
     <Provider store={store}>
-      <PageLayout>
-        <Router>
+      <Router>
+        <PageLayout>
           <Route exact path="/" component={Home} />
           <Route path="/login" component={Login} />
-        </Router>
-      </PageLayout>
+        </PageLayout>
+      </Router>
     </Provider>
   );
 }
