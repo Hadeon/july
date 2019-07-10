@@ -7,6 +7,7 @@ import rootReducer from './_reducers';
 import PageLayout from './components/Layout/PageLayout';
 
 import Home from './routes/Home';
+import Login from './routes/Login';
 
 const store = createStore(rootReducer);
 
@@ -19,6 +20,7 @@ function App() {
       <PageLayout>
         <Router>
           <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
         </Router>
       </PageLayout>
     </Provider>
