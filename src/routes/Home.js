@@ -5,16 +5,16 @@ const StoreItem = React.lazy(() => import('../components/StoreItem'));
 
 export default class Home extends Component {
   state = {
-    count: 10
+    count: 20
   }
   render() {
     return (
       <div style={{ display: 'flex', flexDirection: 'row', flexFlow: 'row wrap' }}>
-        {[...Array(this.state.count)].map((count, index) => (
-          <Suspense fallback={<div>...Loading</div>} key={index}>
-            <StoreItem/>
-          </Suspense>
-        ))}
+        <Suspense fallback={<div>...Loading</div>} >
+          {[...Array(this.state.count)].map((count, index) => (
+            <StoreItem key={index}/>
+          ))}
+        </Suspense>
       </div>
     )
   }
