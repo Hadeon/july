@@ -10,7 +10,7 @@ export default class Home extends Component {
     return (
       <div style={{ display: 'flex', flexDirection: 'row', flexFlow: 'row wrap' }}>
         {[...Array(this.state.count)].map((count, index) => (
-          <StoreItem key={index}/>
+          <StoreItem key={index} itemNumber={index}/>
         ))}
       </div>
     )
