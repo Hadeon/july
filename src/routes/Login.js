@@ -1,4 +1,5 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import GoogleLogin from 'react-google-login';
 
 require('dotenv').config()
@@ -6,16 +7,23 @@ require('dotenv').config()
 // Check if the user exists in the DB, if not:
 // Add the user to DB in order to track order history and whatnot
 
-const responseFailure = (res) => {
-  console.log(res);
-}
-
-const responseSuccess = (res) => {
-  let id_token = res.getAuthResponse().id_token;
-  console.log('Login triggered: ' + id_token);
-}
-
 const Login = () => {
+  const dispatch = useDispatch();
+  let user = useSelector(state => state.user.userData);
+
+  const responseSuccess = (res) => {
+    // let id_token = res.getAuthResponse().id_token;
+    dispatch({ 
+      type: 'SET_USER',
+      payload: res.googleId
+    });
+    console.log(user);
+  }
+
+  const responseFailure = (res) => {
+    console.log(res);
+  }
+  
   return (
     <div>
       <GoogleLogin 
