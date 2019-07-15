@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import './StoreItem.css';
 
