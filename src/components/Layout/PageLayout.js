@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavBar from './NavBar';
 import './PageLayout.css';
 
 import Sidebar from './Sidebar';
@@ -16,11 +17,7 @@ export default class PageLayout extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="container navbar">
-          <div onClick={() => this.openSidebar()} className="arrow-container">
-            <div className={`arrow ${this.state.sidebarActive ? 'down' : 'left'}`}/>
-          </div>
-        </div>
+        <NavBar active={this.state.sidebarActive} openSidebar={() => this.openSidebar()}/>
         <div style={{
           display: 'flex',
           flexDirection: 'column'

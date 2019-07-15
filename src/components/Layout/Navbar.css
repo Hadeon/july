@@ -1,0 +1,43 @@
+.container {
+  position: fixed;
+  top: 0;
+  background-color: #222;
+  color: white;
+}
+
+.navbar {
+  height: 4rem;
+  width: 100%;
+  z-index: 2;
+}
+
+.arrow-container {
+  cursor: pointer;
+  user-select: none;
+  display: inline-block;
+  padding: 1.25rem;
+  margin: 0rem 0rem 0rem 1rem;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  padding: .5rem;
+}
+
+.left {
+  transform: rotate(135deg);
+  transition: transform .5s;
+}
+
+.down {
+  transform: rotate(45deg);
+  transition: transform .5s;
+}
+
+.nav-buttons {
+  display: inline-block;
+  float: right;
+  margin-right: 2rem;
+  margin-top: .2rem;
+}

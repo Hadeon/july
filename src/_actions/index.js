@@ -4,3 +4,4 @@ import { TEST } from '../constants/action-types';
 export function testAction(payload) {
   return { type: TEST, payload }
 }
+
