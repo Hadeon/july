@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import GoogleLogin from 'react-google-login';
+import { GoogleLogin, GoogleLogout } from 'react-google-login';
 import './Navbar.css';
+
+import GoogleAuth from './GoogleAuth';
 
 export default class Navbar extends Component {
 
@@ -20,13 +22,7 @@ export default class Navbar extends Component {
           <div className={`arrow ${this.props.active ? 'down' : 'left'}`}></div>
         </div>
         <div className="nav-buttons">
-          <GoogleLogin 
-            clientId='709656880482-oq2l4u3dm519nvgiiie6mufokqt73umq.apps.googleusercontent.com'
-            buttonText="Login" 
-            onSuccess={this.responseSuccess} 
-            onFailure={this.responseFailure}
-            cookiePolicy={'single_host_origin'}
-          />
+          <GoogleAuth/>
         </div>
       </div>
     )
