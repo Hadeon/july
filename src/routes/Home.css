@@ -1,0 +1,23 @@
+.image-container {
+  background-image: url('../assets/seattle.jpeg');
+  background-size: cover;
+  background-position: 0% 60%;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  height: 25rem;
+  width: 100%;
+  z-index: 0;
+  margin: 1rem;
+}
+
+.image-container h1 {
+  padding-top: 10rem;
+  text-align: center;
+}
+
+.store-items {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  justify-content: center;
+}
