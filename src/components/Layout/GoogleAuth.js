@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { GoogleLogin, GoogleLogout } from 'react-google-login';
 
 const GoogleAuth = () => {
   const dispatch = useDispatch();
+  const [loggedIn, setLoggedIn] = useState(false)
   let user = useSelector(state => state.user.userData);
 
   const responseSuccess = (res) => {
@@ -12,6 +13,7 @@ const GoogleAuth = () => {
       type: 'SET_USER',
       payload: res.googleId
     });
+    setLoggedIn(true);
     console.log(user);
   }
 
@@ -20,13 +22,19 @@ const GoogleAuth = () => {
   }
   return (
     <div>
-      <GoogleLogin 
-        clientId='709656880482-oq2l4u3dm519nvgiiie6mufokqt73umq.apps.googleusercontent.com'
-        buttonText="Login" 
-        onSuccess={responseSuccess} 
-        onFailure={responseFailure}
-        cookiePolicy={'single_host_origin'}
-      />
+      { loggedIn ? (
+        <GoogleLogout
+          buttonText="Logout"
+        />
+      ) : (
+        <GoogleLogin 
+          clientId='709656880482-oq2l4u3dm519nvgiiie6mufokqt73umq.apps.googleusercontent.com'
+          buttonText="Login" 
+          onSuccess={responseSuccess} 
+          onFailure={responseFailure}
+          cookiePolicy={'single_host_origin'}
+        />
+      )}
     </div>
   )
 }
