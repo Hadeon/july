@@ -8,7 +8,6 @@ const GoogleAuth = () => {
   let user = useSelector(state => state.user.userData);
 
   const responseSuccess = (res) => {
-    // let id_token = res.getAuthResponse().id_token;
     dispatch({ 
       type: 'SET_USER',
       payload: res.googleId
@@ -20,11 +19,21 @@ const GoogleAuth = () => {
   const responseFailure = (res) => {
     console.log(res);
   }
+
+  const logoutSuccess = () => {
+    dispatch({
+      type: 'SET_USER',
+      payload: ''
+    })
+    setLoggedIn(false);
+  }
   return (
     <div>
       { loggedIn ? (
         <GoogleLogout
           buttonText="Logout"
+          onLogoutSuccess={logoutSuccess}
+          onFailure={responseFailure}
         />
       ) : (
         <GoogleLogin 
