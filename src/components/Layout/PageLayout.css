@@ -1,13 +1,14 @@
 .container {
   position: fixed;
   top: 0;
-  background-color: #222;
+  background-color: black;
   color: white;
 }
 
 .sidebar {
   height: 100%;
   width: 20rem;
+  background-color: #222;
 }
 
 .active {

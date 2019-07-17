@@ -1,6 +1,6 @@
 .sidebar-body {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 5rem;
 }
 
 .sidebar-body h2 {
@@ -15,10 +15,23 @@
 }
 
 .sidebar-body ul li {
-    padding: .5rem;
+    padding: 1rem;
     color: white;
     background-color: #444;
     margin: 1rem;
     user-select: none;
     cursor: pointer;
+}
+
+.sidebar-body ul li:hover {
+    background-color: #999;
+}
+
+.sidebar-body ul li:active {
+    background-color: #777;
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: white;
 }
