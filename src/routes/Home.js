@@ -8,10 +8,15 @@ export default class Home extends Component {
   }
   render() {
     return (
-      <div style={{ display: 'flex', flexDirection: 'row', flexFlow: 'row wrap' }}>
-        {[...Array(this.state.count)].map((count, index) => (
-          <StoreItem key={index} itemNumber={index}/>
-        ))}
+      <div>
+        <div className="image-container">
+          <h1>Avecus Store</h1>
+        </div>
+        <div className="store-items">
+          {[...Array(this.state.count)].map((count, index) => (
+            <StoreItem key={index} itemNumber={index}/>
+          ))}
+        </div>
       </div>
     )
   }
