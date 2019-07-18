@@ -7,6 +7,9 @@ import rootReducer from './_reducers';
 import PageLayout from './components/Layout/PageLayout';
 
 import Home from './routes/Home';
+import Cart from './routes/Cart';
+import Merch from './routes/Merch';
+import About from './routes/About';
 
 const store = createStore(rootReducer);
 
@@ -19,6 +22,9 @@ function App() {
       <Router>
         <PageLayout>
           <Route exact path="/" component={Home} />
+          <Route exact path="/merch/:item" component={Merch} />
+          <Route exact path="/cart" component={Cart} />
+          <Route exact path="/about" component={About} />
         </PageLayout>
       </Router>
     </Provider>
