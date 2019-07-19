@@ -1,5 +1,6 @@
 import {
-  SET_CART,
+  ADD_CART,
+  REMOVE_CART,
   GET_CART
 } from '../constants/action-types';
 
@@ -9,7 +10,12 @@ const initialState = {
 
 export default function(state = initialState, action) {
   switch(action.type) {
-  case SET_CART:
+  case ADD_CART:
+    return {
+      ...state,
+      items: action.payload
+    }
+  case REMOVE_CART:
     return {
       ...state,
       items: action.payload

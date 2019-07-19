@@ -1,11 +1,19 @@
 import {
-  SET_CART,
-  GET_CART
+  ADD_CART,
+  GET_CART,
+  REMOVE_CART
 } from '../constants/action-types';
 
-export const setCart = (items) => {
+export const addCart = (items) => {
   return {
-    type: SET_CART,
+    type: ADD_CART,
+    payload: items
+  }
+}
+
+export const removeCart = (items) => {
+  return {
+    type: REMOVE_CART,
     payload: items
   }
 }
