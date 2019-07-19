@@ -6,17 +6,15 @@ const Sidebar = () => {
   return (
     <div className="sidebar-body">
       <ul>
+        <Link to="/" className="sidebar-link">Featured Items</Link>
         <li>
-          <Link to="/" className="sidebar-link">A listed element</Link>
+          <Link to="/merch/clothing" className="sidebar-link">Clothing</Link>
         </li>
         <li>
-          <Link to="/" className="sidebar-link">A listed element</Link>
+          <Link to="/merch/stickers" className="sidebar-link">Stickers</Link>
         </li>
         <li>
-          <Link to="/" className="sidebar-link">A listed element</Link>
-        </li>
-        <li>
-          <Link to="/" className="sidebar-link">A listed element</Link>
+          <Link to="/about" className="sidebar-link">About</Link>
         </li>
       </ul>
     </div>
