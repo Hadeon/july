@@ -13,9 +13,6 @@ import About from './routes/About';
 
 const store = createStore(rootReducer);
 
-// Logged in state and validation at the highest level so the user would be kicked back to login from here.
-// Additionally, pass the logged in state down to PageLayout and hide the navigation options if not logged in.
-
 function App() {
   return (
     <Provider store={store}>
