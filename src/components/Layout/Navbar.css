@@ -35,9 +35,19 @@
   transition: transform .5s;
 }
 
-.nav-buttons {
-  display: inline-block;
-  float: right;
+.google-button {
   margin-right: 2rem;
   margin-top: .2rem;
+  float: right;
 }
+
+.cart-button { 
+  float: right;
+  margin-right: 3rem;
+  margin-top: .5rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+
