@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import cart from '../../assets/cart.png';
 import './Navbar.css';
 
 import GoogleAuth from './GoogleAuth';
@@ -24,8 +25,8 @@ export default class Navbar extends Component {
         <div className="google-button">
           <GoogleAuth/>
         </div>
-        <Link to="/cart">
-          <div className="cart-button"/>
+        <Link to="/cart" className="cart-button">
+          <img src={cart} alt="Cart" width="35rem"/>
         </Link>
       </div>
     )
