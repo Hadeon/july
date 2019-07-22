@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 import GoogleAuth from './GoogleAuth';
@@ -20,9 +21,12 @@ export default class Navbar extends Component {
         <div onClick={() => this.props.openSidebar()} className="arrow-container">
           <div className={`arrow ${this.props.active ? 'down' : 'left'}`}></div>
         </div>
-        <div className="nav-buttons">
+        <div className="google-button">
           <GoogleAuth/>
         </div>
+        <Link to="/cart">
+          <div className="cart-button"/>
+        </Link>
       </div>
     )
   }
