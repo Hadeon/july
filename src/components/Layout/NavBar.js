@@ -20,14 +20,14 @@ export default class Navbar extends Component {
     return (
       <div className="container navbar">
         <div onClick={() => this.props.openSidebar()} className="arrow-container">
-          <div className={`arrow ${this.props.active ? 'down' : 'left'}`}></div>
+          <div className={`arrow ${this.props.active ? 'down' : 'left'}`}/>
         </div>
-        <div className="google-button">
+        <div className="flex-end">
+          <Link to="/cart" className="cart-button">
+            <img src={cart} alt="Cart" width="30rem"/>
+          </Link>
           <GoogleAuth/>
         </div>
-        <Link to="/cart" className="cart-button">
-          <img src={cart} alt="Cart" width="35rem"/>
-        </Link>
       </div>
     )
   }

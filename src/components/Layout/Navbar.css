@@ -1,8 +1,8 @@
 .container {
   position: fixed;
-  top: 0;
   background-color: #222;
   color: white;
+  display: flex;
 }
 
 .navbar {
@@ -35,19 +35,18 @@
   transition: transform .5s;
 }
 
-.google-button {
-  margin-right: 2rem;
-  margin-top: .2rem;
-  float: right;
-}
-
 .cart-button { 
-  float: right;
   margin-right: 3rem;
-  margin-top: .5rem;
+  margin-top: .35rem;
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
 }
 
-
+.flex-end {
+  display: inline-flex;
+  flex-direction: row;
+  width: 100rem;
+  justify-content: flex-end;
+  margin: .25rem 2rem 0rem 0rem;
+}
