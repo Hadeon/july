@@ -4,17 +4,17 @@ import {
   REMOVE_CART
 } from '../constants/action-types';
 
-export const addCart = (items) => {
+export const addCart = (item) => {
   return {
     type: ADD_CART,
-    payload: items
+    payload: item
   }
 }
 
-export const removeCart = (items) => {
+export const removeCart = (item) => {
   return {
     type: REMOVE_CART,
-    payload: items
+    payload: item
   }
 }
 

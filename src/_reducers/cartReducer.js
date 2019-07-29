@@ -16,10 +16,7 @@ export default function(state = initialState, action) {
       items: action.payload
     }
   case REMOVE_CART:
-    return {
-      ...state,
-      items: action.payload
-    }
+    return state.filter(({ id }) => id !== action.data)
   case GET_CART:
     return {
       ...state
