@@ -7,6 +7,10 @@ const StoreItem = (props) => {
     threshold: 0
   })
 
+  const addToCart = () => {
+    console.log(`Added ${props.itemNumber}`)
+  }
+
   return (
     <div className="store-item-container" ref={ref}>
       { inView ? (
@@ -15,6 +19,7 @@ const StoreItem = (props) => {
           <p>Some details. It's a thing. It's great. Now buy it please.</p>
           <h4>$10</h4>
           <p>{props.itemNumber}</p>
+          <button className="store-item-add" onClick={addToCart}>Add to Cart</button>
         </React.Fragment>
       ) : <React.Fragment>...Loading</React.Fragment> }
     </div>
