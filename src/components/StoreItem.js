@@ -1,8 +1,11 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 import { useInView } from 'react-intersection-observer';
 import './StoreItem.css';
 
 const StoreItem = (props) => {
+  let state = useSelector(state => state);
+
   const [ref, inView] = useInView({
     threshold: 0
   })
